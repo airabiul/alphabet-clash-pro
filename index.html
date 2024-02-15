@@ -10,16 +10,16 @@
   <body class="">
     <main class="min-h-screen bg-[#1E1E1E] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home scheen -->
-      <section class="home min-h-svh flex flex-col justify-center items-center hidden">
+      <section id="home-screen" class="min-h-svh flex flex-col justify-center items-center">
         <div class="flex flex-col justify-center items-center gap-8">
-        <h1 class="text-7xl text-white font-extrabold">ALPHABET CLASH PRO</h1>
-        <p class="text-white">Unleash Your Keyboard Kung Fu : Press "Enter" to Play</p>
-        <button class="btn text-black">Play Now</button>
+        <h1 class="text-6xl text-white font-extrabold">ALPHABET CLASH PRO</h1>
+        <p class="text-2xl text-white">Unleash Your Keyboard Kung Fu : Press "Enter" to Play</p>
+        <button onclick="play()" class="btn text-black">Play Now</button>
         </div>
       </section>
-      <section class="play-ground">
+      <section id="play-ground" class="hidden">
         <!-- plaground -->
-        <div class="flex flex-col justify-center items-center gap-20 pt-20 hidden">
+        <div class="flex flex-col justify-center items-center gap-20 pt-20 ">
             <!-- screen -->
             <div class=" artboard artboard-horizontal phone-6 border-[20px] rounded-2xl   border-[#010313CC] bg-[#FFFFFFBA]">
                 <div class="flex justify-center">
@@ -67,7 +67,7 @@
             </div>
             <!-- keyboard end -->
             <!-- life-scor -->
-          <div class="flex justify-between w-[50%] border-2">
+          <div class="flex justify-between w-[50%]">
             <button class="btn rounded-full text-2xl bg-[#894189] border-none px-5 py-2">
                 Life
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
@@ -81,7 +81,18 @@
           </div>
         </div>
       </section>
-      <section class="score"></section>
+        <!-- final scor start -->
+      <section class="score flex justify-center items-center min-h-screen text-white hidden">
+        <div class="text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+          <h1 class="text-8xl">
+            <span class="font-extrabold">Score:</span>
+            <span>14</span>
+          </h1>
+          <button class="btn">Play Again</button>
+          <p>Practic will make you a pro</p>
+        </div>
+      </section>
     </main>
+    <script src="scrip/alpha-class.js"></script>
   </body>
 </html>
